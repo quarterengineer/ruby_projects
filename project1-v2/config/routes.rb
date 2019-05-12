@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :on_taraf do
+    get 'ana_sayfa/index'
+  end
+  
+  
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "on_taraf/ana_sayfa#index" #ana sayfa
 end
